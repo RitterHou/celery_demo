@@ -2,8 +2,11 @@
 import logging
 
 import requests
+from redis.client import Redis
 
 from . import app
+
+redis_cli = Redis('127.0.0.1', db=1)
 
 
 @app.task
@@ -23,3 +26,10 @@ def add(x, y):
 def sort_list(data):
     logging.info('Sort list: {}'.format(data))
     return sorted(data)
+
+
+@app.task
+def get_redis_keys():
+    keys = redis_cli.keys()
+    logging.info('redis keys: {}'.format(keys))
+    return keys

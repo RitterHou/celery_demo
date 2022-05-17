@@ -8,7 +8,7 @@ hostname=''
 while getopts 'fql:n:' flag; do
   case "${flag}" in
   f) operation='flower --port=5555' ;;  # 启动flower，而不是worker
-  q) queue_flag='-Q sort,celery' ;;     # 使用自定义队列
+  q) queue_flag='-Q queue_1,celery' ;;  # 使用自定义队列
   l) log_level="${OPTARG}" ;;           # 设置日志级别
   n) hostname="--hostname ${OPTARG}" ;; # 指定worker的主机名，可选参数：%p，%h，%n，%d
   *) echo "Unknown flag: ${flag}" ;;
