@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+"""
+创建celery的tasks
+"""
 import logging
 
 import requests

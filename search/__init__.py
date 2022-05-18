@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+"""
+创建一个celery的app
+"""
 from __future__ import absolute_import
 
 import logging

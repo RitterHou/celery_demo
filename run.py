@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+"""
+发送celery的tasks
+"""
 import logging
 
 from search.tasks import search_url, add, sort_list, get_redis_keys

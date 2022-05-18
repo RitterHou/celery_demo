@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-
+"""
+celery的配置
+"""
 include = ['search.tasks']
 
 # https://docs.celeryq.dev/en/v4.4.7/userguide/routing.html#automatic-routing
